@@ -8,9 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/b57fd66914.js" crossorigin="anonymous"></script>
     <title>Ipl-Teams</title>
-    <link rel="icon"
-        href="https://play-lh.googleusercontent.com/jT7BW0fN4fdzlBCkBQqfooB6ormtmKztDpXm_F7CyAMIPRZcL28boQmOwWqvCVelnDl5=w240-h480-rw"
-        type="image/x-icon">
+    <link rel="icon" href="https://play-lh.googleusercontent.com/jT7BW0fN4fdzlBCkBQqfooB6ormtmKztDpXm_F7CyAMIPRZcL28boQmOwWqvCVelnDl5=w240-h480-rw" type="image/x-icon">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
@@ -153,6 +151,10 @@
             #centernav ul {
                 display: flex;
             }
+            .navbar2{
+            display: grid;
+            grid-template-columns: repeat(auto-fill,minmax(80px,1fr));
+            }
 
             .trendingFlex ul li {
                 margin: 0px 15px;
@@ -167,6 +169,10 @@
         @media screen and (min-width:800px) {
             .trendingFlex ul li {
                 display: flex;
+            }
+            .navbar2{
+            display: grid;
+            grid-template-columns: repeat(auto-fill,minmax(80px,1fr));
             }
             .playersCard{
                 margin: 50px auto;
@@ -513,13 +519,6 @@
             .playersCard{
                 margin: 50px auto;
             }
-            .footer div ul h1,.footer div ul li{
-                font-size: 0.8rem;
-            }
-            .iplsquad{
-                font-size: 2rem;
-            }
-
         }
 
         .logo {
@@ -531,14 +530,6 @@
             font-size: 3rem;
         }
 
-        @media screen and (min-width:550px){            
-            .cont div:last-child {
-                display: flex;
-                justify-content: flex-start;
-                flex-direction: column;
-                margin: 0px 0px 0px 20px;
-            }
-        }
 
         .trophy {
             margin: 10px;
@@ -590,37 +581,66 @@
             align-items: center;
         }
 
-        .playersec {
+
+@media screen and (min-width:800px){
+       .playersec {
             display: flex;
             justify-content: center;
             align-items: center;
-        }
+        } 
+}
 
         .playerImg {
-            width: 50%;
+            width:100%;
             text-align: right;
         }
 
         .playerImg img {
-            width: 50%;
+            width: 100%;
 
         }
 
         .playerabout {
-            width: 80%;
+            width: 100%;
+            padding: 10px;
         }
 
         .playerabout h1 {
-            font-size: 4rem;
+            font-size: clamp(2.5rem,4rem,5rem);
             color: white;
+        }
+        #playerDis{
+            color: white;
+            font-size: clamp(0.9rem,1.1rem,1.3rem);
         }
 
         .playerabout ul li {
             list-style-type: none;
-            font-size: 2.3rem;
+            font-size:clamp(1.3rem,1.5rem,1.8rem);
             color: white;
         }
 
+        @media screen and (min-width:850px) {
+            .playerabout h1 {
+            font-size: clamp(4rem,4.5rem,5rem);
+            color: white;
+        }
+
+
+        .playerabout ul li {
+            list-style-type: none;
+            font-size:clamp(1.8rem,2.2rem,2.4rem);
+            color: white;
+             margin: 5px 0px;
+        }
+        #playerDis{
+            color: white;
+            font-size: clamp(1.5rem,1.8rem,2rem);
+            margin: 10px 0; 
+        }
+        
+
+        }
 
         footer {
             margin: 50px 0 0 0;
@@ -805,6 +825,25 @@
         #mens {
             background-color: #DA4E20;
         }
+           
+        @media screen and (min-width:550px){            
+            .cont div:last-child {
+                display: flex;
+                justify-content: flex-start;
+                flex-direction: column;
+                margin: 0px 0px 0px 20px;
+            }
+        }    
+        @media screen and (max-width:550px){ 
+            .footer div ul h1,.footer div ul li{
+                font-size: 0.8rem;
+            }
+            .playerabout h1{
+                text-align: center;
+                font-size: 2.2rem;
+            }
+        }
+
     </style>
 
 </head>
@@ -813,7 +852,7 @@
     <header>
         <nav class="navbar">
             <div id="leftnav">
-                <img src="https://www.iplt20.com/assets/images/ipl-logo-new-old.png" alt="iplLogo">
+<img src="https://www.iplt20.com/assets/images/ipl-logo-new-old.png" alt="iplLogo">
             </div>
 
             <div id="centernav">
@@ -830,160 +869,112 @@
             </div>
 
             <div id="rightnav">
-                <input type="text" placeholder="Search Player By Team">
+                <input  type="text" placeholder="Search Player By Team">
                 <img src="https://www.iplt20.com/assets/images/fan-poll.svg" alt="fan-poll">
                 <img src="https://www.iplt20.com/assets/images/viewers-choice.svg" alt="viewers-choice">
             </div>
         </nav>
+
         <nav class="navbar2">
-            <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/CSK/logos/Roundbig/CSKroundbig.png"
-                alt="Teams-Logo">
-            <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/DC/Logos/Roundbig/DCroundbig.png"
-                alt="Teams-Logo">
-            <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/GT/Logos/Roundbig/GTroundbig.png"
-                alt="Teams-Logo">
-            <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/KKR/Logos/Roundbig/KKRroundbig.png"
-                alt="Teams-Logo">
-            <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/LSG/Logos/Roundbig/LSGroundbig.png"
-                alt="Teams-Logo">
-            <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/MI/Logos/Roundbig/MIroundbig.png"
-                alt="Teams-Logo">
-            <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/PBKS/Logos/Roundbig/PBKSroundbig.png"
-                alt="Teams-Logo">
-            <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/RR/Logos/Roundbig/RRroundbig.png"
-                alt="Teams-Logo">
-            <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/RCB/Logos/Roundbig/RCBroundbig.png"
-                alt="Teams-Logo">
-            <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/SRH/Logos/Roundbig/SRHroundbig.png"
-                alt="Teams-Logo">
-        </nav>
+            <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/CSK/logos/Roundbig/CSKroundbig.png" alt="Teams-Logo">
+            <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/DC/Logos/Roundbig/DCroundbig.png" alt="Teams-Logo">
+            <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/GT/Logos/Roundbig/GTroundbig.png" alt="Teams-Logo">
+            <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/KKR/Logos/Roundbig/KKRroundbig.png" alt="Teams-Logo">
+            <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/LSG/Logos/Roundbig/LSGroundbig.png" alt="Teams-Logo">
+            <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/MI/Logos/Roundbig/MIroundbig.png" alt="Teams-Logo">
+            <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/PBKS/Logos/Roundbig/PBKSroundbig.png" alt="Teams-Logo">
+            <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/RR/Logos/Roundbig/RRroundbig.png" alt="Teams-Logo">
+            <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/RCB/Logos/Roundbig/RCBroundbig.png" alt="Teams-Logo">
+            <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/SRH/Logos/Roundbig/SRHroundbig.png" alt="Teams-Logo">
+                       </nav>
+
+
     </header>
-
-    <section class="selectedteam">
-        <div class="selectedteamdetails">
-        </div>
-    </section>
-
-    <div class="iplsquaddiv">
-        <h1 class="iplsquad">IPL Squad 2022</h1>
-        <div class="viewAll">View All</div>
+<section class="playerContainer" >
+</section>
+<footer>
+    <div>
+        <ul>
+            <h1>TEAM</h1>
+            <li>Chennai Super Kings</li>
+            <li>Delhi Capitals</li>
+            <li>Gujarat Titans</li>
+            <li>Kolkata Knight Riders</li>
+            <li>More...</li>
+        </ul>
+        
+        <ul>
+            <h1>CONTACT</h1>
+            <li>Contact Us</li>
+            <li>Sponsorship</li>
+            <li>Privacy Policy</li>
+       </ul>
+    
+        <ul>
+            <h1>ABOUT</h1>
+    <li>About Us</li>
+    <li>Anti Corruption Policy</li>
+    <li>Anti Doping Policy</li>
+    <li>TUE Application Form</li>
+    <li>Anti Discrimination</li>
+        </ul>
     </div>
-
-    <section class="sec2">
-    </section>
-
-    <footer>
-        <div>
-            <ul>
-                <h1>TEAM</h1>
-                <li>Chennai Super Kings</li>
-                <li>Delhi Capitals</li>
-                <li>Gujarat Titans</li>
-                <li>Kolkata Knight Riders</li>
-                <li>More...</li>
-            </ul>
-
-            <ul>
-                <h1>CONTACT</h1>
-                <li>Contact Us</li>
-                <li>Sponsorship</li>
-                <li>Privacy Policy</li>
-            </ul>
-
-            <ul>
-                <h1>ABOUT</h1>
-                <li>About Us</li>
-                <li>Anti Corruption Policy</li>
-                <li>Anti Doping Policy</li>
-                <li>TUE Application Form</li>
-                <li>Anti Discrimination</li>
-            </ul>
-        </div>
-
+    
     </footer>
-
-
     <script>
-        const selectedteam = document.querySelector(".selectedteam");
-        const selectedteamdetails = document.querySelector(".selectedteamdetails");
-        const section2 = document.querySelector(".sec2");
-        const playerContainer = document.querySelector(".playerContainer");
-        const section2home = document.getElementById("#section2home");
-        const searchresult = document.getElementById("#searchresult");
-        var link = window.location.search.split("=")[1];
-        let fetchhelp = window.location.href.split('/')
-        let getFetch1 = fetchhelp[0]+"//"+fetchhelp[1]+fetchhelp[2]+"/"
-        let getFetch =  getFetch1 || "http://localhost:8080/"
-     
-console.log(fetch(`${getFetch}getTeams/${link}`))
+
+const playerContainer = document.querySelector(".playerContainer");
+var collect = window.location.search.split("=")
+const playerNum = window.location.search.split("=")[1]-1;
+const teamNUm = window.location.search.split("=")[2];
+let fetchhelp = window.location.href.split('/')
+let getFetch1 = fetchhelp[0]+"//"+fetchhelp[1]+fetchhelp[2]+"/"
+console.log(getFetch1)
+let getFetch =  getFetch1 || "http://localhost:8080/"
+console.log(`${getFetch}getTeams/${teamNUm}`)
 Promise.all([
-	fetch(`${getFetch}getTeams/${link}`),
-	fetch(`${getFetch}players${link}`)
+	fetch(`${getFetch}getTeams/${teamNUm}`),
+	fetch(`${getFetch}players${teamNUm}`)
 ]).then(function (responses) {
-    return Promise.all(responses.map(function (response) {
-	return response.json();
+	return Promise.all(responses.map(function (response) {
+		return response.json();
 	}));
 }).then(function (data) {
-    var part1 = data[0]
-    var part2 = data[1]
-    teamBannerData(part1)
-    teamPlayerCards(part1,part2)
+    var teamdata = data[0]
+    console.log(teamdata[0])
+    var playersdata = data[1]
+    console.log(playersdata[playerNum])
+    loadpage3(teamdata,playersdata[playerNum])
 })
 .catch(function (error) {
 	console.log(error);
 });            
 
 
-        function teamBannerData(data) {
-            const selectteamdata = `
-  <div class="cont" id="gstyle" style="background:${data[0].background}">
-  <div>
-      <img class="logo"
-          src="${data[0].img}"
-          alt="logo">
+function loadpage3(teamData,playersData) {
+  const page3data = `
+  <div class="playersec"style="background:${teamData[0].background}">
+  <div class="playerImg">
+<img src="${playersData.img}" style="margin:8px ">
+
   </div>
-  <div>
-      <h2>${data[0].teamName}</h2>
-      <div class="officialsite">Official Team Site
-          <i class="fa-brands fa-twitter"></i> <i class="fa-brands fa-instagram"></i><i
-              class="fa-brands fa-facebook"></i>
-      </div>
-      <div class="trophy"> <i class="fa-solid fa-trophy">${data[0].Won}</i>
-       
-          <ul>
-              <li><span>Owner</span> : ${data[0].teamName}</li>
-              <li> <span>Coach</span> :${data[0].coach}</li>
-              <li> <span>Venue</span>: ${data[0].Stadium}</li>
-              <li><span>Captain </span>:${data[0].Captain}</li>
-              <li> <span>Top Batsman</span>:${data[0].Captain}</li>
-              <li> <span>Top Bowler </span>: ${data[0].topbowler}</li>
-              <li> <span>Total Players</span>: ${data[0].totalPLayer}</li>
-          </ul>
-      </div>
+  <div class="playerabout">
+      <h1>${playersData.playername}</h1>
+      <ul>
+          <li>Team : ${teamData[0].teamName} </li>
+          <li>Role : ${playersData.role}</li>
+          <li>Price : ${playersData.price}</li>
+          <li>Status : ${playersData.isPlaying}</li>
+      </ul>
+      <p id="playerDis">About  : ${playersData.description}</p>
   </div>
-</div>`;
+</div>
+`;
+  playerContainer.innerHTML += page3data;
+}
 
-            selectedteamdetails.innerHTML = selectteamdata;
+    </script>
 
-        }
 
-        function teamPlayerCards(data,playerdata) {
-            for (var j = 0; j < playerdata.length; j++) {
-    const players = `<div class="playersCard" style="background:${data[0].background};border:${data[0].border}">
-    <a href="player-page?id=${j + 1}=${link}">
-    <img src="${playerdata[j].img}" alt="">
-    <ul style="background:${data[0].background};border:${data[0].border}">    
-        <li>${playerdata[j].playername}</li>
-        <li><span>Team</span>: ${data[0].teamName}</li>
-        <li><span>Roll</span>: ${playerdata[j].role}</li>
-        <li><span>Price</span>:  ${playerdata[j].price}</li>
-    </ul>
-    </a>
-    </div>`
-   section2.innerHTML += players;
-            }}
-
-</script>
 </body>
-
 </html>
